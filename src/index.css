@@ -1,13 +1,421 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
 }
+
+header{
+    display: flex;
+    background: url(/assets/img/road2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 85vh;
+    max-height: 50rem;   
+}
+
+.header{
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .25);
+    background-size: cover;
+    width: 100%;
+    height: 85vh;
+    max-height: 50rem;
+}
+
+nav {
+    display: flex;
+    margin: 2em;
+    font-family: 'Bree Serif',serif , Ubuntu;
+}
+
+.nav-title{
+    order: 0;
+    flex-grow: 2;
+}
+
+.nav-title a {
+    text-decoration: none;
+    color: #ff9c07;
+    font-size: 2em;
+    -webkit-text-stroke: 1px #d5963d;
+    
+}
+
+
+.nav-navigator{
+    order: 1;
+    align-items: center;
+    background: rgba(0, 0, 0, .25);
+
+    
+}
+
+.nav-navigator ul {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-navigator ul li{
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: .3em;
+    font-size: 1.2em;
+    display: inline;
+    text-decoration: none;
+    margin: 0;
+}
+
+.nav-navigator a{
+    text-decoration: none;
+    color: #db8706;
+}
+
+.nav-navigator a:hover{
+    padding: 0;
+    color: #ff9c07;
+    text-decoration: underline;
+}
+
+.nav-navigator li:hover{
+    position: sticky;
+    font-size: 1.3em;
+    color: #1d1d1d;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img{
+    margin-top: 1em;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 250px;
+}
+
+.introduce{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2em;
+    font-family: 'Bree Serif',serif , Ubuntu;
+    text-align: center;
+    color: #ff9c07;
+}
+
+.introduce p {
+    font-size: 1.2em;
+}
+
+h1{
+    -webkit-text-stroke: 1px #9f702d;
+}
+
+.social-networks{
+    margin: -.7em;
+    position: relative;
+    align-self: center;
+    display: flex;
+    font-size: 2em;
+    color:white;
+}
+
+.facebook-circle{
+    background-color: #4267b2;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.twitter-circle{
+    background-color: #1da1f2;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.instagram-circle{
+    background: linear-gradient(to right top,#e0bf03,#e70a19,#7c39ad);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.github-circle{
+    background-color: #24292e;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.linkedin-circle{
+    background-color: white;
+    color: #0077b5;
+    /* border: 1px solid black; */
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    margin-right: 2em;
+    margin-left: 2em;
+    padding: 1.5em; 
+    border-radius: .5em;
+    
+}
+
+.card:last-child{
+    margin-bottom: 5em;
+}
+
+.card-header{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: 'Pacifico', cursive;
+}
+
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: 'Courgette', cursive;
+    text-align: justify;
+}
+
+.card-body > .me-icon {
+    margin-right: 10%;
+    margin-left: 10%;
+    color: #2d3334;
+    font-size: 10em;
+    flex-grow: 2;
+}
+
+.card-body-skills{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-family: 'Courgette', cursive;
+    width: 200vh;
+    padding: 1em;
+    padding-bottom: 2em;
+    /* overflow-x: scroll; */
+}
+
+.card-t{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-size: 4em; */
+    /* padding: 1em; */
+    border-radius: 50%;
+    width: 3.5em;
+    height: 3.5em;
+    margin-right: .4em;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+    transform: scale(2,2);
+    transition: transform 1s;
+}
+
+.card-t:hover{
+    transform: scale(2.5,2.5);
+    /* position: absolute; */
+    z-index: 1;
+    /* right: 50%; */
+}
+
+
+.angular-card{
+    background-color: #f0f0f0;
+    color: #b73036;
+    /* border: 1px solid black; */
+}
+
+.react-card{
+    background-color: #282c34;
+    color: #61dafb;
+}
+
+.node-card{
+    background-color: #333333;
+    color:#70c12a;
+}
+
+.php-card{
+    background-color: #7478ae;
+}
+
+.laravel-card{
+    background-color: #ff2d20;
+}
+
+.java-card{
+    background-color: #f13d3d;
+    color: white;
+}
+
+.db-card{
+    background-color: #2f5676;
+    color: white;
+}
+
+.diagram-card{
+    background-color: #1d2f3f;
+    color: #36b173;
+}
+
+.linux-card{
+    background-color: #f0f0f0;
+}
+
+.docker-card{
+    background-color: #309aeb;
+    color: white;
+}
+
+.language-card{
+    background-color: #87c540;
+    color: #1b3641;
+}
+
+.learning-card{
+    background-color: #3be1f0;
+    color: #191919;
+}
+
+
+
+
+.about-skill{
+    display: none;
+}
+
+.card-about-icon{
+    font-size: 10em;
+    align-self: center;
+    padding-bottom: .2em;
+}
+
+.arrow-up{
+    position: absolute;
+    right: 2em;
+    font-size: 4em;
+    color: #191919;
+    transition: transform 1s;
+}
+
+.arrow-up:hover{
+    transform: scale(1.2,1.2);
+}
+
+.square-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    font-size: 14pt;
+    max-width: 400px;
+    max-height: 450px;
+    border-radius: 25px 25px 25px 25px;
+    cursor: pointer;
+}
+
+.square-card-header{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-block-end: 2px solid black;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 5px;
+}
+
+.square-card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-card-body > img {
+    padding-bottom: 20px;
+}
+
+.square-card-body > p {
+    padding: 1.5em;
+}
+
+.square-card-footer{
+    margin: 1em;
+}
+
+.square-card-footer > button {
+    padding: 1em;
+    border-radius: 25px 5px 25px 5px;
+    background-color: white;
+}
+
+footer{
+    padding: 2em;
+    background-color: #191f26;
+    color: #777777
+}
+
+

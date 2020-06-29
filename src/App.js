@@ -1,10 +1,12 @@
 import React from 'react';
 import Header from './components/commons/Header';
+import Footer from './components/commons/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
        <Header/>
+       <Footer/>
     </div>
   );
 }
