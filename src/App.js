@@ -3,6 +3,7 @@ import Header from './components/commons/Header';
 import Footer from './components/commons/Footer';
 import SocialNets from './components/SocialNets';
 import About from './components/About';
+import Skills from './components/Skills';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
        <SocialNets/>
        <section>
          <About/>
+         <Skills/>
        </section>
        <Footer/>
     </div>
