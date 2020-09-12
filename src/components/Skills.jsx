@@ -94,7 +94,11 @@ const Skills = () => {
     let updateSkills = copySkills.map((skill) => {
       skill.selected = false;
       if (skill.rawName === skillData.rawName) {
-        skill.selected = skillData.skillStatus;
+	if(skill.selected){
+	  skill.selected = false;
+	}else{
+	 skill.selected = true;
+	}
       }
       return skill;
     });
