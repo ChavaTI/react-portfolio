@@ -92,13 +92,14 @@ const Skills = () => {
   const syncSkills = (skillData) => {
     let copySkills = [...skills];
     let updateSkills = copySkills.map((skill) => {
-      skill.selected = false;
       if (skill.rawName === skillData.rawName) {
 	if(skill.selected){
 	  skill.selected = false;
 	}else{
-	 skill.selected = true;
+	  skill.selected = true;
 	}
+      }else{
+	skill.selected = false;
       }
       return skill;
     });
@@ -107,12 +108,12 @@ const Skills = () => {
 
   return (
     <div id="skills" className="card">
-      <div className="card-header">Skills</div>
-      <div className="card-body-skills">
-        {skills.map((skill) => (
-          <Skill key={skill.rawName} skill={skill} syncSkills={syncSkills} />
-        ))}
-      </div>
+    <div className="card-header">Skills</div>
+    <div className="card-body-skills">
+    {skills.map((skill) => (
+      <Skill key={skill.rawName} skill={skill} syncSkills={syncSkills} />
+    ))}
+    </div>
     </div>
   );
 };

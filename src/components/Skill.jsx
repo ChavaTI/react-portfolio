@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const Skill = ({ skill, syncSkills }) => {
-  const [skillStatus, updateSkillStatus] = useState(false); 
 
   const handleStatus = () => {
     syncSkills({
-      skillStatus,
+      skillStatus: skill.selected,
       rawName: skill.rawName,
     });
 
