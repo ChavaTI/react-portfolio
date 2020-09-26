@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSkill = ({currentSkill}) => {
   return (
-    currentSkill === undefined ? null : 
+    Object.keys(currentSkill).length === 0 ? null : 
     <div id="about-skill" className = "about-skill">
        <div className = "card">
           <div className = "card-header">
