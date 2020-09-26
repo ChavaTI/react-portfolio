@@ -3,7 +3,7 @@ import React from "react";
 const AboutSkill = ({currentSkill}) => {
   return (
     Object.keys(currentSkill).length === 0 ? null : 
-    <div id="about-skill" className = "about-skill">
+    <div id="about-skill" className = "about-skill" style = { {backgroundColor : currentSkill.color} }>
        <div className = "card">
           <div className = "card-header">
               {currentSkill.name}
