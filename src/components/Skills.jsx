@@ -142,10 +142,11 @@ const Skills = ({handleCurrentSkill}) => {
       if (skill.rawName === skillData.rawName) {
 	if(skill.selected){
 	  skill.selected = false;
+	  handleCurrentSkill({});
 	}else{
 	  skill.selected = true;
+	  handleCurrentSkill(skill);
 	}
-	handleCurrentSkill(skill);
       }else{
 	skill.selected = false;
       }
