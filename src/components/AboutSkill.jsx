@@ -1,6 +1,11 @@
 import React from "react";
 
-const AboutSkill = ({currentSkill}) => {
+const AboutSkill = ({currentSkill, handleCurrentSkill}) => {
+
+  const cleanCurrentSkill = () => {
+    handleCurrentSkill({});
+  }
+
   return (
     Object.keys(currentSkill).length === 0 ? null : 
     <div id="about-skill" className = {`about-skill ${currentSkill.card}`} >
@@ -14,7 +19,7 @@ const AboutSkill = ({currentSkill}) => {
         <div className="card-body text">
           <p>{currentSkill.description}</p>
         </div>
-        <div className = "arrow-up" id="back-to-skills">
+        <div className = "arrow-up" id="back-to-skills" onClick = {cleanCurrentSkill}>
           <i className = "fas fa-arrow-alt-circle-up"></i>
         </div>
        </div>
