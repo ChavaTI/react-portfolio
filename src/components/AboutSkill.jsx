@@ -8,15 +8,15 @@ const AboutSkill = ({currentSkill, handleCurrentSkill}) => {
 
   return (
     Object.keys(currentSkill).length === 0 ? null : 
-    <div id="about-skill" className = {`about-skill ${currentSkill.card}`} >
+    <div id="about-skill" className = "about-skill" style = { {backgroundColor : currentSkill.color} }>
        <div className = "card">
-          <div className = "card-header text">
+          <div className = "card-header">
               {currentSkill.name}
            </div>
         <div className = "card-about-icon">
           <i className = { currentSkill.icon }></i>
         </div>
-        <div className="card-body text">
+        <div className="card-body">
           <p>{currentSkill.description}</p>
         </div>
         <div className = "arrow-up" id="back-to-skills" onClick = {cleanCurrentSkill}>
