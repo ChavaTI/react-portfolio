@@ -346,6 +346,10 @@ section{
     padding-bottom: .2em;
 }
 
+.text{
+  color: black;
+}
+
 .arrow-up{
     position: absolute;
     right: 2em;

@@ -7,7 +7,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "React",
       rawName: "react",
       icon: "fab fa-react",
-      color: "#282c34",
       selected: false,
       card: "react-card",
       description: `ReactJs is my favorite frontend library develop. I fully know how to use both the props and class components, 
@@ -18,7 +17,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "Angular",
       rawName: "angular",
       icon: "fab fa-angular",
-      color: "#f0f0f0",
       selected: false,
       card: "angular-card",
       description: `Angular was the first frontend framework that I knew.  I master using the components of this framework and 
@@ -29,7 +27,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "Node",
       rawName: "node",
       icon: "fab fa-node-js",
-      color: "#333333",
       selected: false,
       card: "node-card",
       description: `NodeJS was the first backend framework I’ve ever worked with. At the beginning I used to develop web apps using 
@@ -41,7 +38,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "PHP",
       rawName: "php",
       icon: "fab fa-php",
-      color: "#7478ae",
       selected: false,
       card: "php-card",
       description: `My first web language was PHP, I’ve used this language since university. My knowledge of this field goes from  PHP 7 on web server, 
@@ -51,7 +47,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "Laravel",
       rawName: "laravel",
       icon: "fab fa-laravel",
-      color: "#ff2d20",
       selected: false,
       card: "laravel-card",
       description: `I've created project with Laravel framework using its tools like Laravel controllers, blade, eloquent, phpunit for test the code and 
@@ -61,7 +56,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "Java",
       rawName: "java",
       icon: "fab fa-java",
-      color: "#f13d3d",
       selected: false,
       card: "java-card",
       description: `Java is my first POO language. I have a lot of experience coding in Java since I’ve worked with it for a long time. 
@@ -73,7 +67,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "DB",
       rawName: "db",
       icon: "fas fa-database",
-      color: "#2f5676",
       selected: false,
       card: "db-card",
       description: `One element inside my skill set is designing SQL databases. The common way that I follow to achieve this task is 
@@ -85,7 +78,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "Linux",
       rawName: "linux",
       icon: "fab fa-linux",
-      color: "#f0f0f0",
       selected: false,
       card: "linux-card",
       description: `Linux systems are the reason why I love computer science. I’ve used linux for ten years, I know how to install and manage the systems 
@@ -100,7 +92,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "Docker",
       rawName: "docker",
       icon: "fab fa-docker",
-      color: "#309aeb",
       selected: false,
       card: "docker-card",
       description: `Regarding docker, I can upload only few lines of code instead of making an oversize configuration on the server. 
@@ -113,7 +104,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "Diagram",
       rawName: "diagram",
       icon: "fas fa-project-diagram",
-      color: "#1d2f3f",
       selected: false,
       card: "diagram-card",
       description: `I’m able to make software engineering that goes from requirements analysis using interviews, surveys, documentation analysis, 
@@ -125,7 +115,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "Language",
       rawName: "language",
       icon: "fas fa-language",
-      color: "#87c540",
       selected: false,
       card: "language-card",
       description: `My native language is spanish and I've studied english since elementary school until now. 
@@ -137,7 +126,6 @@ const Skills = ({handleCurrentSkill}) => {
       name: "Learning",
       rawName: "learning",
       icon: "fas fa-book-reader",
-      color: "#3be1f0",
       selected: false,
       card: "learning-card",
       description: `I love computer science, software development, programming, and making solutions. 
