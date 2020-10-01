@@ -19,7 +19,6 @@ function App() {
          />
          <AboutSkill
           currentSkill = {currentSkill}
-          handleCurrentSkill = {handleCurrentSkill}
          />
        </section>
        <Footer/>
