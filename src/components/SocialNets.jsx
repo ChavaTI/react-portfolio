@@ -3,7 +3,7 @@ import SocialNet from './SocialNet';
 
 const SocialNets = () => {
     
-    const [socialNetworks, addSocialNetwork] = useState([
+    const [socialNetworks] = useState([
         {
             name: "Facebook",
             url: "https://www.facebook.com/ChavaTI",

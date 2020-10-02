@@ -1,4 +1,5 @@
 import React from "react";
+import { Link  } from "react-scroll";
 
 const AboutSkill = ({currentSkill}) => {
 
@@ -15,9 +16,9 @@ const AboutSkill = ({currentSkill}) => {
         <div className="card-body">
           <p>{currentSkill.description}</p>
         </div>
-        <div className = "arrow-up" id="back-to-skills">
+        <Link to="skills" smooth={true} className = "arrow-up">
           <i className = "fas fa-arrow-alt-circle-up"></i>
-        </div>
+        </Link>
        </div>
     </div>
     
