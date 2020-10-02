@@ -280,6 +280,9 @@ section{
     /* right: 50%; */
 }
 
+.text{
+  color: black;
+}
 
 .angular-card{
     background-color: #f0f0f0;
