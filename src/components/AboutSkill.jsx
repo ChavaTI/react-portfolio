@@ -5,15 +5,15 @@ const AboutSkill = ({currentSkill}) => {
 
   return (
     Object.keys(currentSkill).length === 0 ? null : 
-    <div id="about-skill" className = "about-skill" style = { {backgroundColor : currentSkill.color} }>
+    <div id="about-skill" className = {`about-skill ${currentSkill.card}`}>
        <div className = "card">
-          <div className = "card-header">
+          <div className = "card-header text">
               {currentSkill.name}
            </div>
         <div className = "card-about-icon">
           <i className = { currentSkill.icon }></i>
         </div>
-        <div className="card-body">
+        <div className="card-body text">
           <p>{currentSkill.description}</p>
         </div>
         <Link to="skills" smooth={true} className = "arrow-up">
