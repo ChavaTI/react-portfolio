@@ -5,6 +5,7 @@ import SocialNets from './components/SocialNets';
 import About from './components/About';
 import Skills from './components/Skills';
 import AboutSkill from "./components/AboutSkill";
+import Experiences from './components/Experiences';
 
 function App() {
   const [currentSkill, handleCurrentSkill] = useState({});
@@ -20,6 +21,7 @@ function App() {
          <AboutSkill
           currentSkill = {currentSkill}
          />
+         <Experiences/>
        </section>
        <Footer/>
     </div>
