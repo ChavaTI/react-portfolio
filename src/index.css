@@ -408,6 +408,10 @@ section{
     background-color: white;
 }
 
+.contact-body{
+    flex-direction: column;
+}
+
 footer{
     padding: 2em;
     background-color: #191f26;
