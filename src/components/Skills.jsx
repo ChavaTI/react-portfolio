@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { scroller as scroll } from "react-scroll";
 import Skill from "./Skill";
 
 const Skills = ({ handleCurrentSkill }) => {
@@ -159,9 +158,6 @@ const Skills = ({ handleCurrentSkill }) => {
         } else {
           skill.selected = true;
           handleCurrentSkill(skill);
-          scroll.scrollTo("about-skill", {
-            smooth: true,
-          });
         }
       } else {
         skill.selected = false;
