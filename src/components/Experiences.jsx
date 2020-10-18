@@ -19,7 +19,7 @@ const Experiences = () => {
       <div className="card-header">Experience</div>
       <div className="card-body">
         {experiences.map((exp) => (
-          <Experience id={exp.company} exp={exp} />
+          <Experience key={exp.company} exp={exp} />
         ))}
       </div>
     </div>
