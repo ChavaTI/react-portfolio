@@ -7,7 +7,7 @@ const Experience = ({ exp }) => {
       title: exp.company,
       text: exp.description,
       imageUrl: exp.urlImage,
-      imageAlt: exp.company
+      imageAlt: exp.company,
     });
   };
 

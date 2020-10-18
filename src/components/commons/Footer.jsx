@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const Footer = () => ( 
-    <footer>
-        <p>&copy; chava.com | by Salvador Hernández López</p>
-    </footer>
- );
+const Footer = () => (
+  <footer>
+    <p>&copy; chava.com | by Salvador Hernández López</p>
+  </footer>
+);
 
- 
 export default Footer;
+
