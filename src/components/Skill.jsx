@@ -2,10 +2,7 @@ import React from "react";
 
 const Skill = ({ skill, syncSkills }) => {
   const handleStatus = () => {
-    syncSkills({
-      skillStatus: skill.selected,
-      rawName: skill.rawName,
-    });
+    syncSkills(skill);
   };
 
   return (
