@@ -148,11 +148,10 @@ const Skills = ({ handleCurrentSkill }) => {
     },
   ]);
 
-  const syncSkills = (skillSelected) => {
+  const syncSkills = (currentSkill) => {
     let copySkills = [...skills];
     let updateSkills = copySkills.map((skill) => {
-      skill.selected = false;
-      if (skill.rawName === skillSelected.rawName) {
+      if (skill.rawName === currentSkill.rawName) {
         if (skill.selected) {
           skill.selected = false;
           handleCurrentSkill({});
@@ -160,6 +159,8 @@ const Skills = ({ handleCurrentSkill }) => {
           skill.selected = true;
           handleCurrentSkill(skill);
         }
+      } else {
+        skill.selected = false;
       }
       return skill;
     });
