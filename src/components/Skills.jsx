@@ -149,15 +149,15 @@ const Skills = ({ handleCurrentSkill }) => {
   ]);
 
   const syncSkills = (currentSkill) => {
-    let copySkills = [...skills];
-    let actualSkill = {...currentSkill};
-    if (copySkills.includes(currentSkill)) {
+    if (skills.includes(currentSkill)) {
+      let copySkills = [...skills];
+      let actualSkill = { ...currentSkill };
       let id = copySkills.findIndex((skill) => skill === currentSkill);
       actualSkill.selected = !currentSkill.selected;
-      copySkills.forEach(skill => skill.selected = false);
+      copySkills.forEach((skill) => (skill.selected = false));
       copySkills.splice(id, 1, actualSkill);
-      handleSkills(copySkills);
       const newSkill = actualSkill.selected ? actualSkill : {};
+      handleSkills(copySkills);
       handleCurrentSkill(newSkill);
     }
   };
