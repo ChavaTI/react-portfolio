@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 const Nav = () => (
   <nav>
     <div className="nav-title">
-      <p>My web CV</p>
+      <p>My web resume</p>
     </div>
     <div className="nav-navigator">
       <ul>
