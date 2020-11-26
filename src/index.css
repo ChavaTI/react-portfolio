@@ -13,6 +13,7 @@
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
+  
 }
 
 header {
@@ -40,16 +41,6 @@ nav {
   font-family: "Bree Serif", serif, Ubuntu;
 }
 
-@media (max-width: 840px){
-  nav {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
-  nav div {
-    margin-bottom: 12px;
-  }
-}
 
 .nav-title {
   order: 0;
@@ -247,7 +238,7 @@ section {
   margin-right: 10%;
   margin-left: 10%;
   color: #2d3334;
-  font-size: 10em;
+  font-size: 10rem;
   flex-grow: 2;
 }
 
@@ -357,7 +348,7 @@ section {
 
 .arrow-up {
   position: absolute;
-  right: 2em;
+  right: 1em;
   font-size: 4em;
   color: #191919;
   transition: transform 1s;
@@ -422,4 +413,38 @@ footer {
   padding: 2em;
   background-color: #191f26;
   color: #777777;
+}
+
+@media (max-width: 840px){
+  nav {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  nav div {
+    margin-bottom: 12px;
+  }
+  .card-body {
+    flex-direction: column;
+  }
+  .card-body p {
+    order: 1;
+  }
+  .me-icon {
+    order: 0;
+  }
+  .card-body-skills {
+    display: block;
+  }
+  .card-t{
+    border-radius: 0;
+    transform: none;
+    width: 100vh;
+  }
+  .card-t:hover {
+    transform: none;
+  }
+  .arrow-up {
+    margin-bottom: 1em;
+  }
 }
