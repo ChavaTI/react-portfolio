@@ -4,37 +4,33 @@ import { Link } from 'react-scroll';
 const Nav = () => {
   return (
     <nav>
-      <div className="nav-title">
-        <p>My web resume</p>
+      <input type="checkbox" id="nav-check" />
+      <div className="nav-header">
+        <div className="nav-title">My web resume</div>
+      </div>
+      <div className="nav-btn">
+        <label className="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </div>
       <div className="nav-navigator">
-        <ul>
-          <li>
-            <Link to="about" smooth={true}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="skills" smooth={true}>
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link to="portfolio" smooth={true}>
-              Portafolio
-            </Link>
-          </li>
-          <li>
-            <Link to="experience" smooth={true}>
-              Experience
-            </Link>
-          </li>
-          <li>
-            <Link to="contact" smooth={true}>
-              Contact
-            </Link>
-          </li>
-        </ul>
+        <Link to="about" smooth={true}>
+          About
+        </Link>
+        <Link to="skills" smooth={true}>
+          Skills
+        </Link>
+        <Link to="portfolio" smooth={true}>
+          Portafolio
+        </Link>
+        <Link to="experience" smooth={true}>
+          Experience
+        </Link>
+        <Link to="contact" smooth={true}>
+          Contact
+        </Link>
       </div>
     </nav>
   );

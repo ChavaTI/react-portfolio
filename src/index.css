@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Courgette&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 
 * {
   margin: 0;
@@ -13,7 +13,6 @@
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
-  
 }
 
 header {
@@ -36,51 +35,40 @@ header {
 }
 
 nav {
-  display: flex;
   margin: 2em;
-  font-family: "Bree Serif", serif, Ubuntu;
+  font-family: 'Bree Serif', serif, Ubuntu;
+  position: relative;
 }
 
-
-.nav-title {
-  order: 0;
-  flex-grow: 2;
-}
-
-.nav-title p {
+.nav-header {
+  display: inline;
   text-decoration: none;
   color: #ff9c07;
   font-size: 2em;
   -webkit-text-stroke: 1px #d5963d;
 }
 
+.nav-title {
+  display: inline-block;
+}
+
+.nav-btn {
+  display: none;
+}
+
 .nav-navigator {
-  align-self: center;
-  order: 1;
+  display: inline-block;
+  float: right;
   background: rgba(0, 0, 0, 0.25);
-  max-width: 538px;
-  width:100%;
-}
-
-.nav-navigator ul {
-  display: flex;
-  text-align: center;
-}
-
-.nav-navigator ul li {
-  display: inline;
-  padding-right: 1em;
-  padding-left: 1em;
-  padding-top: 0.3em;
-  font-size: 14pt;
-  text-decoration: none;
-  margin: 0;
-  list-style-type: none;
 }
 
 .nav-navigator a {
+  display: inline-block;
   text-decoration: none;
   color: #db8706;
+  margin: 5px;
+  font-size: 14pt;
+  cursor: pointer;
 }
 
 .nav-navigator a:hover {
@@ -89,10 +77,8 @@ nav {
   text-decoration: underline;
 }
 
-.nav-navigator li:hover {
-  position: sticky;
-  font-size: 1.3em;
-  color: #1d1d1d;
+#nav-check {
+  display: none;
 }
 
 .img-container {
@@ -113,7 +99,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   margin-top: 2em;
-  font-family: "Bree Serif", serif, Ubuntu;
+  font-family: 'Bree Serif', serif, Ubuntu;
   text-align: center;
   color: #ff9c07;
 }
@@ -222,7 +208,7 @@ section {
   font-size: 2em;
   text-align: center;
   margin-bottom: 1em;
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
 }
 
 .card-body {
@@ -230,7 +216,7 @@ section {
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
-  font-family: "Courgette", cursive;
+  font-family: 'Courgette', cursive;
   text-align: justify;
 }
 
@@ -249,7 +235,7 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 1.5em;
-  font-family: "Courgette", cursive;
+  font-family: 'Courgette', cursive;
   padding: 1em;
   padding-bottom: 2em;
   /* overflow-x: scroll; */
@@ -414,16 +400,54 @@ footer {
   background-color: #191f26;
   color: #777777;
 }
+/*https://codepen.io/chavati/pen/MWjjKde*/
+@media (max-width: 840px) {
+  .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+  }
+  .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav-btn > label:hover,
+  nav #nav-check ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
 
-@media (max-width: 840px){
-  nav {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
+  .nav-navigator {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
   }
-  nav div {
-    margin-bottom: 12px;
+  .nav-navigator > a {
+    display: block;
+    width: 100%;
   }
+  #nav-check:not(:checked) ~ .nav-navigator {
+    height: 0px;
+  }
+  #nav-check:checked ~ .nav-navigator {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
   .card-body {
     flex-direction: column;
   }
@@ -436,7 +460,7 @@ footer {
   .card-body-skills {
     display: block;
   }
-  .card-t{
+  .card-t {
     border-radius: 0;
     transform: none;
     width: 100vw;
