@@ -443,7 +443,7 @@ footer {
     height: 0px;
   }
   #nav-check:checked ~ .nav-navigator {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 75vh);
     overflow-y: auto;
   }
 
