@@ -20,7 +20,7 @@ header {
   background: url(/assets/img/road2.jpg) no-repeat center center fixed;
   background-size: cover;
   width: 100%;
-  height: 85vh;
+  height: 570px;
   max-height: 50rem;
 }
 
@@ -30,8 +30,7 @@ header {
   background-color: rgba(0, 0, 0, 0.25);
   background-size: cover;
   width: 100%;
-  height: 85vh;
-  max-height: 50rem;
+  height: 570px;
 }
 
 nav {
