@@ -409,10 +409,9 @@ footer {
     left: 0px;
   }
   .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
+    float: right;
+    padding: 15px 10px 5px;
+    align-items: center;
   }
   .nav-btn > label:hover,
   nav #nav-check ~ .nav-btn > label {
@@ -420,7 +419,7 @@ footer {
   }
   .nav-btn > label > span {
     display: block;
-    width: 25px;
+    width: 40px;
     height: 10px;
     border-top: 2px solid #eee;
   }

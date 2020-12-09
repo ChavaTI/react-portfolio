@@ -9,7 +9,7 @@ const Nav = () => {
         <div className="nav-title">My web resume</div>
       </div>
       <div className="nav-btn">
-        <label className="nav-check">
+        <label className="nav-check" htmlFor = "nav-check">
           <span></span>
           <span></span>
           <span></span>
