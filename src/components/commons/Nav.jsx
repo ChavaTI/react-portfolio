@@ -11,11 +11,12 @@ const Nav = () => {
         checked={checked}
         onChange={(e) => {
           e.persist();
-          handleChecked(true);
+          const check = !checked;
+          handleChecked(check);
         }}
       />
       <div className="nav-header">
-        <div className="nav-title">My web resume</div>
+        <div className="nav-title">Resume</div>
       </div>
       <div className="nav-btn">
         <label className="nav-check" htmlFor="nav-check">
