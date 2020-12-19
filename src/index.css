@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Courgette&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
 
 * {
   margin: 0;
@@ -13,6 +11,8 @@
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
+  font-family: 'Fira Code', monospace;
+  font-weight: 700px;
 }
 
 header {
@@ -20,7 +20,7 @@ header {
   background: url(/assets/img/road2.jpg) no-repeat center center fixed;
   background-size: cover;
   width: 100%;
-  height: 85vh;
+  height: 570px;
   max-height: 50rem;
 }
 
@@ -30,52 +30,43 @@ header {
   background-color: rgba(0, 0, 0, 0.25);
   background-size: cover;
   width: 100%;
-  height: 85vh;
-  max-height: 50rem;
+  height: 570px;
 }
 
 nav {
-  display: flex;
   margin: 2em;
-  font-family: "Bree Serif", serif, Ubuntu;
+  position: relative;
 }
 
-.nav-title {
-  order: 0;
-  flex-grow: 2;
-}
-
-.nav-title p {
+.nav-header {
+  display: inline;
   text-decoration: none;
   color: #ff9c07;
   font-size: 2em;
   -webkit-text-stroke: 1px #d5963d;
 }
 
+.nav-title {
+  display: inline-block;
+}
+
+.nav-btn {
+  display: none;
+}
+
 .nav-navigator {
-  order: 1;
-  align-items: center;
+  display: inline-block;
+  float: right;
   background: rgba(0, 0, 0, 0.25);
 }
 
-.nav-navigator ul {
-  display: flex;
-  align-items: center;
-}
-
-.nav-navigator ul li {
-  padding-right: 1em;
-  padding-left: 1em;
-  padding-top: 0.3em;
-  font-size: 1.2em;
-  display: inline;
-  text-decoration: none;
-  margin: 0;
-}
-
 .nav-navigator a {
+  display: inline-block;
   text-decoration: none;
   color: #db8706;
+  margin: 5px;
+  font-size: 14pt;
+  cursor: pointer;
 }
 
 .nav-navigator a:hover {
@@ -84,10 +75,8 @@ nav {
   text-decoration: underline;
 }
 
-.nav-navigator li:hover {
-  position: sticky;
-  font-size: 1.3em;
-  color: #1d1d1d;
+#nav-check {
+  display: none;
 }
 
 .img-container {
@@ -108,7 +97,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   margin-top: 2em;
-  font-family: "Bree Serif", serif, Ubuntu;
   text-align: center;
   color: #ff9c07;
 }
@@ -217,7 +205,6 @@ section {
   font-size: 2em;
   text-align: center;
   margin-bottom: 1em;
-  font-family: "Pacifico", cursive;
 }
 
 .card-body {
@@ -225,7 +212,6 @@ section {
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
-  font-family: "Courgette", cursive;
   text-align: justify;
 }
 
@@ -233,7 +219,7 @@ section {
   margin-right: 10%;
   margin-left: 10%;
   color: #2d3334;
-  font-size: 10em;
+  font-size: 10rem;
   flex-grow: 2;
 }
 
@@ -244,8 +230,6 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 1.5em;
-  font-family: "Courgette", cursive;
-  width: 200vh;
   padding: 1em;
   padding-bottom: 2em;
   /* overflow-x: scroll; */
@@ -344,7 +328,7 @@ section {
 
 .arrow-up {
   position: absolute;
-  right: 2em;
+  right: 1em;
   font-size: 4em;
   color: #191919;
   transition: transform 1s;
@@ -409,4 +393,75 @@ footer {
   padding: 2em;
   background-color: #191f26;
   color: #777777;
+}
+/*https://codepen.io/chavati/pen/MWjjKde*/
+@media (max-width: 840px) {
+  .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+  }
+  .nav-btn > label {
+    float: right;
+    padding: 15px 10px 5px;
+    align-items: center;
+  }
+  .nav-btn > label:hover,
+  nav #nav-check ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav-btn > label > span {
+    display: block;
+    width: 40px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+
+  .nav-navigator {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav-navigator > a {
+    display: block;
+    width: 100%;
+  }
+  #nav-check:not(:checked) ~ .nav-navigator {
+    height: 0px;
+  }
+  #nav-check:checked ~ .nav-navigator {
+    height: calc(100vh - 75vh);
+    overflow-y: auto;
+  }
+
+  .card-body {
+    flex-direction: column;
+  }
+  .card-body p {
+    order: 1;
+  }
+  .me-icon {
+    order: 0;
+  }
+  .card-body-skills {
+    display: block;
+  }
+  .card-t {
+    border-radius: 0;
+    transform: none;
+    width: 100vw;
+  }
+  .card-t:hover {
+    transform: none;
+  }
+  .arrow-up {
+    margin-bottom: 1em;
+  }
 }
