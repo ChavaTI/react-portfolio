@@ -8,9 +8,6 @@ import Skills from './components/Skills';
 import AboutSkill from './components/AboutSkill';
 import Experiences from './components/Experiences';
 import Contact from './components/Contact';
-import { FirebaseDatabaseProvider } from '@react-firebase/database';
-import * as firebaseConfig from './firebase/config';
-import firebase from 'firebase';
 
 function App() {
   const [currentSkill, handleCurrentSkill] = useState({});
@@ -21,7 +18,6 @@ function App() {
   }, [currentSkill]);
   return (
     <div className="container">
-      <FirebaseDatabaseProvider firebase = {firebase} {...firebaseConfig}>
         <Header />
         <SocialNets />
         <section>
@@ -32,7 +28,6 @@ function App() {
           <Contact />
         </section>
         <Footer />
-      </FirebaseDatabaseProvider>
     </div>
   );
 }
