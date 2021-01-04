@@ -22,9 +22,9 @@ const Skills = ({ handleCurrentSkill }) => {
       actualSkill.selected = !currentSkill.selected;
       copySkills.forEach((skill) => (skill.selected = false));
       copySkills.splice(id, 1, actualSkill);
-      const newSkill = actualSkill.selected ? actualSkill : {};
+      const newCurrentSkill = actualSkill.selected ? actualSkill : {};
       handleSkills(copySkills);
-      handleCurrentSkill(newSkill);
+      handleCurrentSkill(newCurrentSkill);
     }
   };
 
