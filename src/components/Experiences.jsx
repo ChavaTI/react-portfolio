@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import Experience from "./Experience";
+import React, { useState, useEffect } from 'react';
+import Experience from './Experience';
+import getData from '../firebase/service';
 
 const Experiences = () => {
-  const [experiences] = useState([
-    {
-      company: "The Software Artisans",
-      urlImage: "./assets/img/tsa.png",
-      description: `Under this period on TSA I've developed web solutions used differents tools and 
-                   I've trained to the new people in TSA. I'm using languages like php, java, javascript, 
-                   frameworks like reactjs, angular, laravel, about backend tools I've used NodeJS, Socket.io, 
-                   JWT, Express and the databases are mysql, mongodb. All of sevrer run in docker.`,
-    },
-  ]);
+  const [experiences, handleExperiences] = useState([]);
+
+  const fetchData = async () => {
+    const data = await getData('experiences').then((data) => data);
+    handleExperiences(data);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div id="experience" className="card">
